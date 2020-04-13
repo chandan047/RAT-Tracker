@@ -1,10 +1,6 @@
 # SiamFC - PyTorch
 
-> Highlights of this update:
-> - Higher scores with more stable training performance.
-> - Faster training (~11 minutes to train one epoch on GOT-10k on a single GPU).
-> - Added MIT LICENSE.
-> - Organized code.
+This code is forked from [siamfc-pytorch](https://github.com/huanglianghua/siamfc-pytorch). The code is modified as a part of project for the course "CSE586: Computer Vision 2", Pennsylvania State University, under the guidance of Prof. Robert Collins. 
 
 A clean PyTorch implementation of SiamFC tracker described in paper [Fully-Convolutional Siamese Networks for Object Tracking](https://www.robots.ox.ac.uk/~luca/siamese-fc.html). The code is evaluated on 7 tracking datasets ([OTB (2013/2015)](http://cvlab.hanyang.ac.kr/tracker_benchmark/index.html), [VOT (2018)](http://votchallenge.net), [DTB70](https://github.com/flyers/drone-tracking), [TColor128](http://www.dabi.temple.edu/~hbling/data/TColor-128/TColor-128.html), [NfS](http://ci2cv.net/nfs/index.html) and [UAV123](https://ivul.kaust.edu.sa/Pages/pub-benchmark-simulator-uav.aspx)), using the [GOT-10k toolkit](https://github.com/got-10k/toolkit).
 
@@ -14,7 +10,7 @@ A clean PyTorch implementation of SiamFC tracker described in paper [Fully-Convo
 
 | Dataset | AO    | SR<sub>0.50</sub> | SR<sub>0.75</sub> |
 |:------- |:-----:|:-----------------:|:-----------------:|
-| GOT-10k | 0.355 | 0.390             | 0.118             |
+| GOT-10k | 0.334 | 0.352             | 0.099             |
 
 The scores are comparable with state-of-the-art results on [GOT-10k leaderboard](http://got-10k.aitestunion.com/leaderboard).
 
@@ -22,20 +18,7 @@ The scores are comparable with state-of-the-art results on [GOT-10k leaderboard]
 
 | Dataset       | Success Score    | Precision Score |
 |:-----------   |:----------------:|:----------------:|
-| OTB2013       | 0.589            | 0.781            |
-| OTB2015       | 0.578            | 0.765            |
-| UAV123        | 0.523            | 0.731            |
-| UAV20L        | 0.423            | 0.572            |
-| DTB70         | 0.493            | 0.731            |
-| TColor128     | 0.510            | 0.691            |
-| NfS (30 fps)  | -                | -                |
-| NfS (240 fps) | 0.520            | 0.624            |
-
-### VOT2018
-
-| Dataset       | Accuracy    | Robustness (unnormalized) |
-|:-----------   |:-----------:|:-------------------------:|
-| VOT2018       | 0.502       | 37.25                     |
+| OTB2015       | 0.589            | 0.792            |
 
 ## Installation
 
