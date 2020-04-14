@@ -175,8 +175,8 @@ class TrackerSiamFC(Tracker):
         
         # responses
         x = self.net.backbone(x)
-        # responses = self.net.head(self.kernel, x)
-        responses = self.net.capsule(self.kernel, x)        # OUTPUT FROM CAPSULE MAP
+        responses = self.net.head(self.kernel, x)
+        # responses = self.net.capsule(self.kernel, x)        # OUTPUT FROM CAPSULE MAP
         responses = responses.squeeze(1).cpu().numpy()
 
         # upsample responses and penalize scale changes
