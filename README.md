@@ -6,9 +6,21 @@ The objective of this project is to study how Object Tracking can benefit from t
 
 A clean PyTorch implementation of SiamFC tracker described in paper [Fully-Convolutional Siamese Networks for Object Tracking](https://www.robots.ox.ac.uk/~luca/siamese-fc.html). The code is evaluated on 7 tracking datasets ([OTB (2013/2015)](http://cvlab.hanyang.ac.kr/tracker_benchmark/index.html), [VOT (2018)](http://votchallenge.net), [DTB70](https://github.com/flyers/drone-tracking), [TColor128](http://www.dabi.temple.edu/~hbling/data/TColor-128/TColor-128.html), [NfS](http://ci2cv.net/nfs/index.html) and [UAV123](https://ivul.kaust.edu.sa/Pages/pub-benchmark-simulator-uav.aspx)), using the [GOT-10k toolkit](https://github.com/got-10k/toolkit).
 
-# Model
+## Model
 
 ![Model](https://github.com/chandan047/RAT-Tracker/blob/master/arch.png)
+
+
+## Progress
+
+- [x] Implement Capsule Network with dynamic routing between capsules [2]
+- [x] Integrate with SiamFC [1]
+- [x] Implement Adaptive routing for capsule networks[3]
+- [x] Run RAT Tracker model on VOT 2018, OTB-100 datasets
+- [x] Ablation study on motion-classes
+- [ ] Re-train the model with loss on object classification/reconstruction
+- [ ] Motion class group vs output layer of capsule network
+
 
 ## Performance (the scores are updated)
 
@@ -42,6 +54,7 @@ Success Score (IOU)        |  Precision Score          |   Success Rate         
 ![](https://github.com/chandan047/RAT-Tracker/blob/master/plots/success_score.png)  |  ![](https://github.com/chandan047/RAT-Tracker/blob/master/plots/precision_score.png)   |  ![](https://github.com/chandan047/RAT-Tracker/blob/master/plots/success_rate.png)
 
 RAT Tracker outperforms **Illumination Variation (IV)**, **Background Clutters (BC)**, **Low Resolution (LR)** and **Motion Blur (MB)** videos. Performance on **Fast Motion (FM)** is competitive. There is a consistent gain in performance on these types of motion classes where object has similar orientation but the quality is low. Further analysis is required to understand this model.
+
 
 ## Installation
 
@@ -94,12 +107,8 @@ python tools/demo.py
 
 # References
 
-1. [Fully Convolutional Siamese Networks for Object Tracking](https://arxiv.org/abs/1606.09549)
-
-2. [Dynamic Routing Between Capsules](https://papers.nips.cc/paper/6975-dynamic-routing-between-capsules.pdf)
-
-3. [Adaptive Routing Between Capsules](https://arxiv.org/abs/1911.08119)
-
-4. [OTB (2013/2015)](http://cvlab.hanyang.ac.kr/tracker_benchmark/index.html)
-
-5. [VOT (2018)](http://votchallenge.net)
+1. [Fully Convolutional Siamese Networks for Object Tracking](https://arxiv.org/abs/1606.09549), Bertinetto et al.  
+2. [Dynamic Routing Between Capsules](https://papers.nips.cc/paper/6975-dynamic-routing-between-capsules.pdf), Sabour et al.  
+3. [Adaptive Routing Between Capsules](https://arxiv.org/abs/1911.08119), Ren et al.  
+4. [OTB (2013/2015)](http://cvlab.hanyang.ac.kr/tracker_benchmark/index.html)  
+5. [VOT (2018)](http://votchallenge.net)  
