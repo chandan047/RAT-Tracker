@@ -1,6 +1,6 @@
 # RAT Tracker (Route-And-Track Tracker)
 
-The base code is forked from [siamfc-pytorch](https://github.com/huanglianghua/siamfc-pytorch). This code is modified as a part of project for the course "CSE586: Computer Vision 2", Pennsylvania State University, under the guidance of Prof. Robert Collins. 
+The base code is forked from [siamfc-pytorch](https://github.com/huanglianghua/siamfc-pytorch). This code is modified as a part of project for the course "CSE586: Computer Vision 2", Pennsylvania State University, under the guidance of [Prof. Robert Collins](http://www.cse.psu.edu/~rtc12/). 
 
 The objective of this project is to study how Object Tracking can benefit from the properties of [Capusle Network](https://papers.nips.cc/paper/6975-dynamic-routing-between-capsules.pdf). We analyze the performance of Capsule Network on various motion classes and conclude some interesting results.
 
@@ -73,39 +73,35 @@ pip install got10k
 
 ## Training the tracker
 
-1. Setup the training dataset in `tools/train.py`. Default is the GOT-10k dataset located at `~/data/GOT-10k`.
-
-2. Run:
-
+1. Setup the training dataset in `tools/train.py`. Default is the GOT-10k dataset located at `~/data/GOT-10k`.  
+2. Run:  
 ```
 python tools/train.py
 ```
 
 ## Evaluate the tracker
 
-1. Setup the tracking dataset in `tools/test.py`. Default is the OTB dataset located at `~/data/OTB`.
-
-2. Setup the checkpoint path of your pretrained model. Default is `pretrained/siamfc_alexnet_e50.pth`.
-
-3. Run:
-
+1. Setup the tracking dataset in `tools/test.py`. Default is the OTB dataset located at `~/data/OTB`.  
+2. Setup the checkpoint path of your pretrained model. Default is `pretrained/siamfc_alexnet_e50.pth`.  
+3. Run:  
 ```
 python tools/test.py
 ```
 
 ## Running the demo
 
-1. Setup the sequence path in `tools/demo.py`. Default is `~/data/OTB/Crossing`.
-
-2. Setup the checkpoint path of your pretrained model. Default is `pretrained/siamfc_alexnet_e50.pth`.
-
-3. Run:
-
+1. Setup the sequence path in `tools/demo.py`. Default is `~/data/OTB/Crossing`.  
+2. Setup the checkpoint path of your pretrained model. Default is `pretrained/siamfc_alexnet_e50.pth`.  
+3. Run:  
 ```
 python tools/demo.py
 ```
 
-# References
+## Acknowledgements
+
+* I thank [Prof. Robert Collins](http://www.cse.psu.edu/~rtc12/) for guiding me through this project.
+
+## References
 
 1. [Fully Convolutional Siamese Networks for Object Tracking](https://arxiv.org/abs/1606.09549), Bertinetto et al.  
 2. [Dynamic Routing Between Capsules](https://papers.nips.cc/paper/6975-dynamic-routing-between-capsules.pdf), Sabour et al.  
