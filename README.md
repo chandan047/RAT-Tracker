@@ -99,7 +99,7 @@ python tools/demo.py
 
 ## Acknowledgements
 
-* I thank [Prof. Robert Collins](http://www.cse.psu.edu/~rtc12/) for guiding me through this project.
+* I thank [Prof. Robert Collins](http://www.cse.psu.edu/~rtc12/) for guiding us through this project.
 
 ## References
 
